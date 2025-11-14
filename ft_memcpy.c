@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 12:30:02 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/11 15:39:12 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/14 19:01:07 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		return (NULL);
 	while (i < n)
 	{
-		dest[i] = src[i];
+		*(unsigned char *)(dest + i) = *(unsigned char *)(src + i);
 		i++;
 	}
 	return (dest);
