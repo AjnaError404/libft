@@ -6,9 +6,11 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 18:38:57 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/11 15:42:58 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/16 22:53:44 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
