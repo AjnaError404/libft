@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 18:23:50 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/16 19:09:17 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/16 22:25:37 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@ int	ft_atoi(const char *str)
 {
 	int	nbr;
 	int	i;
-	int sign;
+	int	sign;
 
 	nbr = 0;
 	i = 0;
 	sign = 1;
-
 	while ((str[i] >= 9 && str[i] <= 11) || str[i] == 32)
 		i++;
 	if (str[i] == '-')

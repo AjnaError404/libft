@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 17:01:21 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/14 15:53:47 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/16 22:24:43 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
-	
+
 	i = ft_strlen(s);
 	while (i > 0)
 	{

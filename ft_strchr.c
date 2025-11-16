@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 13:24:42 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/16 18:11:46 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/16 22:27:18 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (s[i])
 	{
