@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 12:43:51 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/16 18:47:25 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/16 19:09:31 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_isalnum(int c);
 int	ft_isdigit(int c);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *str);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 int	ft_strlcpy(char *dest, const char *src, size_t n);

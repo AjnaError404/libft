@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 12:42:21 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/16 18:19:56 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/16 19:11:14 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 			i--;
 		}
 	}
-
 	else
 	{
 		while (i < len)

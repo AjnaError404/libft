@@ -1,10 +1,12 @@
 # variables
-TARGET	= libft.a
+NAME	= libft.a
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 
 # liste des fichiers .c
-SRCS	=	ft_bzero.c \
+SRCS	=	ft_atoi.c \
+			ft_bzero.c \
+			ft_calloc.c \
 			ft_tolower.c \
 			ft_toupper.c \
 			ft_isalnum.c \
@@ -23,10 +25,10 @@ SRCS	=	ft_bzero.c \
 			ft_strchr.c \
 			ft_strrchr.c \
 			ft_strnstr.c \
-            ft_calloc.c \
+			ft_strncmp.c \
             
 # règle par défaut
-all: $(TARGET)
+all: $(NAME)
 
 # transformer .c -> .o
 OBJECTS	= $(SRCS:.c=.o)
@@ -34,8 +36,8 @@ OBJECTS	= $(SRCS:.c=.o)
 # lien de l'executable 
 # $@ = $(TARGET)
 # S^ = $(OBJECTS)
-$(TARGET): $(OBJECTS)
-	ar rcs $(TARGET) $(OBJECTS)
+$(NAME): $(OBJECTS)
+	ar rcs $(NAME) $(OBJECTS)
 
 # compilation des .c en .o
 %.o: %.c
@@ -50,7 +52,7 @@ clean:
 
 # nettoyage complet
 fclean: clean
-	rm -f $(TARGET)
+	rm -f $(NAME)
 
 # recompile proprement
 re: fclean all

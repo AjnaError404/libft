@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 18:23:50 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/16 18:46:59 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/16 19:09:17 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ int	ft_atoi(const char *str)
 		nbr = str[i] * 10 - '0';
 		i++;
 	}
-	return (nbr * sign)
+	return (nbr * sign);
 }
