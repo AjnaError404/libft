@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/11 17:16:37 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/11 17:29:57 by laaubry          ###   ########.fr       */
+/*   Created: 2025/11/16 14:44:08 by laaubry           #+#    #+#             */
+/*   Updated: 2025/11/16 18:15:15 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t n)
+void	*ft_calloc(size_t size, size_t nmemb)
 {
+	void	*new_tab;
 	size_t	i;
-	size_t	j;
 
 	i = 0;
-	while (str[i] && i < n)
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	if (size > size * size || size > nmemb * nmemb)
 	{
-		j = 0;
-		while (str[i + j] == to_find[j])
-		{
-			if (to_find[j] == '\0')
-				return (str[i]);
-			j++;
-		}
+		new_tab = malloc(0);
+		return (new_tab);
+	}
+	new_tab = malloc(size * nmemb);
+	if (!new_tab)
+		return (NULL);
+	while (i < size * nmemb)
+	{
+		*(unsigned char *)(new_tab + i) = 0;
 		i++;
 	}
-	return (NULL);
+	return ((void *)new_tab);
 }

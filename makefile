@@ -1,0 +1,69 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/11/16 16:16:26 by laaubry           #+#    #+#              #
+#    Updated: 2025/11/16 18:21:56 by laaubry          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# variables
+TARGET	= libft.a
+CC		= cc
+CFLAGS	= -Wall -Wextra -Werror
+
+# liste des fichiers .c
+SRCS	=	ft_bzero.c \
+			ft_tolower.c \
+			ft_toupper.c \
+			ft_isalnum.c \
+			ft_isalpha.c \
+			ft_isascii.c \
+			ft_isdigit.c \
+			ft_isprint.c \
+			ft_memchr.c \
+			ft_memcmp.c \
+			ft_memcpy.c \
+			ft_memset.c \
+            ft_memmove.c \
+			ft_strlen.c \
+			ft_strlcat.c \
+			ft_strlcpy.c \
+			ft_strchr.c \
+			ft_strrchr.c \
+			ft_strnstr.c \
+            ft_calloc.c \
+            
+# règle par défaut
+all: $(TARGET)
+
+# transformer .c -> .o
+OBJECTS	= $(SRCS:.c=.o)
+
+# lien de l'executable 
+# $@ = $(TARGET)
+# S^ = $(OBJECTS)
+$(TARGET): $(OBJECTS)
+	ar rcs $(TARGET) $(OBJECTS)
+
+# compilation des .c en .o
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# declaration des cibles phony
+.PHONY: all clean fclean re
+
+# supprime les .o
+clean:
+	rm -f $(OBJECTS)
+
+# nettoyage complet
+fclean: clean
+	rm -f $(TARGET)
+
+# recompile proprement
+re: fclean all
+

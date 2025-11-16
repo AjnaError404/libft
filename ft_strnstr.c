@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/13 13:24:42 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/16 18:11:46 by laaubry          ###   ########.fr       */
+/*   Created: 2025/11/11 17:16:37 by laaubry           #+#    #+#             */
+/*   Updated: 2025/11/16 18:14:01 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
 	size_t	i;
-	
+	size_t	j;
+
 	i = 0;
-	while (s[i])
+	while (str[i] && i < n)
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
+		j = 0;
+		while (str[i + j] == to_find[j])
+		{
+			if (to_find[j] == '\0')
+				return ((char *)str + i);
+			j++;
+		}
 		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)(s + i));
 	return (NULL);
 }
-
-/*
-int	main()
-{
-	char s[] = "Pq tu me maries pas";
-	int c = 'q';
-	char *result = ft_strchr(s, c);
-	printf("%s\n", s);
-	return 0;
-}
-*/
