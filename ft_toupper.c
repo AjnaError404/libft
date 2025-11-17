@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:38:05 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/16 21:15:30 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/17 17:34:43 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	unsigned char	b;
-
-	b = (unsigned char)c;
-	if (b >= 'a' && b <= 'z')
-		b -= 32;
-	return (b);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }

@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 12:20:00 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/16 21:15:16 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/17 17:33:40 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	unsigned char	b;
-
-	b = (unsigned char)c;
-	if (b >= 'A' && b <= 'Z')
-		b += 32;
-	return (b);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
