@@ -6,32 +6,48 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 14:44:08 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/16 22:25:14 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/17 21:41:47 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t size, size_t nmemb)
+void	*ft_calloc(size_t size, size_t count)
 {
-	void	*new_tab;
-	size_t	i;
+	size_t			total;
+	unsigned char	*tab;
 
-	i = 0;
-	if (nmemb == 0 || size == 0)
+	if (size != 0 && count > SIZE_MAX / size)
 		return (NULL);
-	if (size > size * size || size > nmemb * nmemb)
-	{
-		new_tab = malloc(0);
-		return (new_tab);
-	}
-	new_tab = malloc(size * nmemb);
-	if (!new_tab)
+	total = size * count;
+	tab = malloc(total);
+	if (!tab)
 		return (NULL);
-	while (i < size * nmemb)
-	{
-		*(unsigned char *)(new_tab + i) = 0;
-		i++;
-	}
-	return ((void *)new_tab);
+	ft_memset(tab, 0, total);
+	return ((void *)tab);
 }
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int *ptr = ft_calloc(3, sizeof(int));
+	int *ptr2 = calloc(3, sizeof(int));
+
+	printf("mine :\n");
+    printf("ptr[0] = %d\n", ptr[0]);
+    printf("ptr[1] = %d\n", ptr[1]);
+    printf("ptr[2] = %d\n", ptr[2]);
+	
+	printf("\nreal :\n");
+	printf("ptr2[0] = %d\n", ptr[0]);
+    printf("ptr2[1] = %d\n", ptr[1]);
+    printf("ptr2[2] = %d\n", ptr[2]);
+
+    free(ptr);
+	free(ptr2);
+    return 0;
+}
+*/

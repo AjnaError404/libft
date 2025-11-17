@@ -6,14 +6,16 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 12:43:51 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/16 22:51:10 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/17 21:26:17 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define SIZE_MAX 18446744073709551615ULL
 # include <unistd.h>
 # include <stdlib.h>
+# include <limits.h>
 
 int		ft_isascii(int c);
 int		ft_isalpha(int c);
