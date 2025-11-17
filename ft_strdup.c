@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 18:48:29 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/16 22:52:15 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/17 22:40:25 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,36 +16,37 @@ char	*ft_strdup(const char *s1)
 {
 	size_t	i;
 	size_t	len;
-	char	*s2;
+	char	*dest;
 
 	len = ft_strlen(s1);
 	i = 0;
-	s2 = malloc(sizeof(len));
-	if (!s2 || !len)
+	dest = malloc(len + 1);
+	if (!dest)
 		return (NULL);
 	while (s1[i])
 	{
-		s2[i] = s1[i];
+		dest[i] = s1[i];
 		i++;
 	}
-	s2[i] = '\0';
-	return (s2);
+	dest[i] = '\0';
+	return (dest);
 }
 
 /*
+#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
+
 int	main()
 {
 	const char str[] = "coucou";
-	char *result;
+	char *mine;
+	char *real;
 
-	result = ft_strdup(str);
-	if (result)
-	{
-		printf("Resultat = %s\n", result);
-	}
-	else
-		printf("Error\n");
+	mine = ft_strdup(str);
+	real = strdup(str);
+	printf("mine = %s\n", mine);
+	printf("real = %s\n", real);
 	return 0;
 }
 */
