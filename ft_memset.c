@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 11:26:39 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/14 19:01:09 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/17 22:43:15 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
 	while (i < n)
 	{
 		*(unsigned char *)(s + i) = c;
