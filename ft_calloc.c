@@ -6,20 +6,20 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 14:44:08 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/17 21:41:47 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/17 22:10:48 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t size, size_t count)
+void	*ft_calloc(size_t count, size_t size)
 {
 	size_t			total;
 	unsigned char	*tab;
 
 	if (size != 0 && count > SIZE_MAX / size)
 		return (NULL);
-	total = size * count;
+	total = count * size;
 	tab = malloc(total);
 	if (!tab)
 		return (NULL);
