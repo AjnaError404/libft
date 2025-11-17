@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 14:14:43 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/17 12:11:41 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/17 22:13:00 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t siz)
 		i++;
 	}
 	if (j + i < siz)
-	dest[j + i] = '\0';
+		dest[j + i] = '\0';
 	return (src_len + j);
 }
