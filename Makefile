@@ -27,6 +27,7 @@ SRCS	=	ft_atoi.c \
 			ft_strnstr.c \
 			ft_strncmp.c \
 			ft_strdup.c \
+			ft_substr.c \
             
 # règle par défaut
 all: $(NAME)
