@@ -34,6 +34,7 @@ SRCS	=	ft_atoi.c \
 			ft_itoa.c \
 			ft_strmapi.c \
 			ft_striteri.c \
+			ft_putchar_fd.c \
             
 # règle par défaut
 all: $(NAME)
