@@ -55,9 +55,6 @@ $(NAME): $(OBJECTS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# declaration des cibles phony
-.PHONY: all clean fclean re
-
 # supprime les .o
 clean:
 	rm -f $(OBJECTS)
@@ -69,3 +66,5 @@ fclean: clean
 # recompile proprement
 re: fclean all
 
+# declaration des cibles phony
+.PHONY: all clean fclean re

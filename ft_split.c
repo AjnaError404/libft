@@ -6,26 +6,31 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 11:59:32 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/22 01:11:46 by laaubry          ###   ########.fr       */
+/*   Updated: 2025/11/23 21:40:48 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(const char *s, char c)
+static int	count_words(char const *s, char c)
 {
-	int	i;
-	int	count;
+	int	nbwords;
+	int	a;
 
-	i = 0;
-	count = 0;
-	while (s[i])
+	a = 0;
+	nbwords = 0;
+	while (s[a])
 	{
-		if ((i == 0 && s[i] != c) || (s[i - 1] == c && s[i] != c))
-			count++;
-		i++;
+		if (s[a] != c
+			&& (s[a + 1] == c || s[a + 1] == '\0'))
+		{
+			nbwords++;
+			a++;
+		}
+		else
+			a++;
 	}
-	return (count);
+	return (nbwords);
 }
 
 static void	free_all(char **tab, int nb_words)
