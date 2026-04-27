@@ -6,39 +6,40 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 12:42:21 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/17 15:36:47 by laaubry          ###   ########.fr       */
+/*   Updated: 2026/04/27 20:44:56 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t				i;
-	const unsigned char	*s;
-	unsigned char		*d;
-
-	d = (unsigned char *)dst;
-	s = (const unsigned char *)src;
+	size_t	i;
+	unsigned char	*src_pt;
+	unsigned char	*dest_pt;
+	
 	i = 0;
-	if (dst == src || len == 0)
-		return (dst);
-	if (d > s && d < s + len)
+	src_pt = (unsigned char *)src;
+	dest_pt = (unsigned char *)dest;
+	if (src_pt > dest_pt)
 	{
-		while (len-- > 0)
-			d[len] = s[len];
-	}
-	else
-	{
-		while (i < len)
+		while (i < n)
 		{
-			d[i] = s[i];
+			dest_pt[i] = src_pt[i];
 			i++;
 		}
 	}
-	return (d);
-}
+	else
+	{
+		i = n;
+		while (i != 0)
+		{
+			i--;
+			dest_pt[i] = src_pt[i];
+		}
 
+	}
+}
 /*
 #include <stdio.h>
 #include <string.h>

@@ -6,7 +6,7 @@
 /*   By: laaubry <laaubry@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 16:44:53 by laaubry           #+#    #+#             */
-/*   Updated: 2025/11/20 17:51:23 by laaubry          ###   ########.fr       */
+/*   Updated: 2026/01/06 19:34:16 by laaubry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,4 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	new[j] = '\0';
 	return (new);
 }
+
