@@ -1,2 +1,2 @@
 # libft
-try to push libft in oneshot 
+libft by a noob
